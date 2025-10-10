@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: Unlicense OR CC0-1.0
  */
 #include "sdkconfig.h"
+#include "caesar.h"
 #include <string.h>
 #include <unistd.h>
 #include <sys/socket.h>

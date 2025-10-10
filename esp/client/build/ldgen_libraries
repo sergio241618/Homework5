@@ -68,14 +68,13 @@
 /project/esp/client/build/esp-idf/newlib/libnewlib.a
 /project/esp/client/build/esp-idf/pthread/libpthread.a
 /project/esp/client/build/esp-idf/cxx/libcxx.a
-/project/esp/client/build/esp-idf/unity/libunity.a
-/project/esp/client/build/esp-idf/nvs_flash/libnvs_flash.a
 /project/esp/client/build/esp-idf/esp_event/libesp_event.a
 /project/esp/client/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 /project/esp/client/build/esp-idf/esp_driver_uart/libesp_driver_uart.a
 /project/esp/client/build/esp-idf/esp_vfs_console/libesp_vfs_console.a
 /project/esp/client/build/esp-idf/lwip/liblwip.a
 /project/esp/client/build/esp-idf/esp_netif/libesp_netif.a
+/project/esp/client/build/esp-idf/nvs_flash/libnvs_flash.a
 /project/esp/client/build/esp-idf/esp_phy/libesp_phy.a
 /project/esp/client/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 /project/esp/client/build/esp-idf/esp_coex/libesp_coex.a
@@ -118,5 +117,4 @@
 /project/esp/client/build/esp-idf/console/libconsole.a
 /project/esp/client/build/esp-idf/esp_eth/libesp_eth.a
 /project/esp/client/build/esp-idf/main/libmain.a
-/project/esp/client/build/esp-idf/unity/libunity.a
 /project/esp/client/build/esp-idf/protocol_examples_common/libprotocol_examples_common.a

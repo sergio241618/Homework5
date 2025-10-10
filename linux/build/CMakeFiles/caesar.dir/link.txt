@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcaesar.a CMakeFiles/caesar.dir/caesar.c.o
+/usr/bin/ranlib libcaesar.a

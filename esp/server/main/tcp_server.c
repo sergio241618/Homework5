@@ -17,7 +17,6 @@
 #include "nvs_flash.h"
 #include "esp_netif.h"
 #include "protocol_examples_common.h"
-#include "caesar.h"
 
 #include "lwip/err.h"
 #include "lwip/sockets.h"

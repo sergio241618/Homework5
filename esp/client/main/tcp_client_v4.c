@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: Unlicense OR CC0-1.0
  */
 #include "sdkconfig.h"
-#include "caesar.h"
 #include <string.h>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -26,7 +25,7 @@
 #define PORT CONFIG_EXAMPLE_PORT
 
 static const char *TAG = "example";
-static const char *payload = "Spartans, prepare for glory! 12345";
+static const char *payload = "Message from ESP32 ";
 
 
 void tcp_client(void)
@@ -64,8 +63,7 @@ void tcp_client(void)
         ESP_LOGI(TAG, "Successfully connected");
 
         while (1) {
-            char *encrypted_payload = caesar_encrypt(payload, 3);
-            int err = send(sock, encrypted_payload, strlen(encrypted_payload), 0);
+            int err = send(sock, payload, strlen(payload), 0);
             if (err < 0) {
                 ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
                 break;

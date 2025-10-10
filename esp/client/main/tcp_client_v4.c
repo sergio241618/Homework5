@@ -5,88 +5,85 @@
  */
 #include "sdkconfig.h"
 #include <string.h>
+#include "caesar.h" // <-- Asegúrate que este archivo existe en la carpeta 'main'
 #include <unistd.h>
 #include <sys/socket.h>
 #include <errno.h>
-#include <netdb.h>            // struct addrinfo
+#include <netdb.h>
 #include <arpa/inet.h>
 #include "esp_netif.h"
 #include "esp_log.h"
-#if defined(CONFIG_EXAMPLE_SOCKET_IP_INPUT_STDIN)
-#include "addr_from_stdin.h"
-#endif
 
-#if defined(CONFIG_EXAMPLE_IPV4)
 #define HOST_IP_ADDR CONFIG_EXAMPLE_IPV4_ADDR
-#elif defined(CONFIG_EXAMPLE_SOCKET_IP_INPUT_STDIN)
-#define HOST_IP_ADDR ""
-#endif
-
 #define PORT CONFIG_EXAMPLE_PORT
 
-static const char *TAG = "example";
-static const char *payload = "Message from ESP32 ";
+static const char *TAG = "TCP_CLIENT";
 
-
-void tcp_client(void)
+void tcp_client_task(void *pvParameters)
 {
-    char rx_buffer[128];
+    // --- USA BUFFERS SEPARADOS PARA MÁS CLARIDAD ---
+    uint8_t tx_buffer[128]; // Buffer para enviar datos (transmitir)
+    char rx_buffer[128];    // Buffer para recibir datos
+
     char host_ip[] = HOST_IP_ADDR;
-    int addr_family = 0;
-    int ip_protocol = 0;
+    int addr_family = AF_INET;
+    int ip_protocol = IPPROTO_IP;
 
     while (1) {
-#if defined(CONFIG_EXAMPLE_IPV4)
         struct sockaddr_in dest_addr;
         inet_pton(AF_INET, host_ip, &dest_addr.sin_addr);
         dest_addr.sin_family = AF_INET;
         dest_addr.sin_port = htons(PORT);
-        addr_family = AF_INET;
-        ip_protocol = IPPROTO_IP;
-#elif defined(CONFIG_EXAMPLE_SOCKET_IP_INPUT_STDIN)
-        struct sockaddr_storage dest_addr = { 0 };
-        ESP_ERROR_CHECK(get_addr_from_stdin(PORT, SOCK_STREAM, &ip_protocol, &addr_family, &dest_addr));
-#endif
 
-        int sock =  socket(addr_family, SOCK_STREAM, ip_protocol);
+        int sock = socket(addr_family, SOCK_STREAM, ip_protocol);
         if (sock < 0) {
             ESP_LOGE(TAG, "Unable to create socket: errno %d", errno);
-            break;
+            vTaskDelay(2000 / portTICK_PERIOD_MS);
+            continue; // Intenta de nuevo
         }
         ESP_LOGI(TAG, "Socket created, connecting to %s:%d", host_ip, PORT);
 
         int err = connect(sock, (struct sockaddr *)&dest_addr, sizeof(dest_addr));
         if (err != 0) {
             ESP_LOGE(TAG, "Socket unable to connect: errno %d", errno);
-            break;
+            close(sock);
+            vTaskDelay(2000 / portTICK_PERIOD_MS);
+            continue; // Cierra el socket e intenta de nuevo
         }
         ESP_LOGI(TAG, "Successfully connected");
 
-        while (1) {
-            int err = send(sock, payload, strlen(payload), 0);
-            if (err < 0) {
-                ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
-                break;
-            }
+        // --- SECCIÓN CORREGIDA ---
 
-            int len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
-            // Error occurred during receiving
-            if (len < 0) {
-                ESP_LOGE(TAG, "recv failed: errno %d", errno);
-                break;
-            }
-            // Data received
-            else {
-                rx_buffer[len] = 0; // Null-terminate whatever we received and treat like a string
-                ESP_LOGI(TAG, "Received %d bytes from %s:", len, host_ip);
-                ESP_LOGI(TAG, "%s", rx_buffer);
-            }
+        // 1. Prepara el mensaje y el shift
+        const char* plaintext_payload = "Sergio Aguirre 12345"; // Tu mensaje
+        uint8_t shift = 7; // Elige tu desplazamiento
+
+        // 2. Llama a la función de cifrado y guarda el NÚMERO de bytes escritos
+        size_t encrypted_len = caesar_encrypt_bytes(plaintext_payload, shift, tx_buffer, sizeof(tx_buffer));
+
+        // 3. Envía el buffer cifrado, usando la longitud devuelta por la función
+        err = send(sock, tx_buffer, encrypted_len, 0);
+        if (err < 0) {
+            ESP_LOGE(TAG, "Error occurred during sending: errno %d", errno);
+            break; // Si falla el envío, rompe el bucle interno
+        }
+        ESP_LOGI(TAG, "Message sent, %zu bytes written", encrypted_len);
+
+        int len = recv(sock, rx_buffer, sizeof(rx_buffer) - 1, 0);
+        if (len < 0) {
+            ESP_LOGE(TAG, "recv failed: errno %d", errno);
+        } else {
+            rx_buffer[len] = 0; // Null-terminate
+            ESP_LOGI(TAG, "Received %d bytes from %s:", len, host_ip);
+            ESP_LOGI(TAG, "%s", rx_buffer); // Muestra la respuesta cifrada del servidor
         }
 
-        if (sock != -1) {
-            ESP_LOGE(TAG, "Shutting down socket and restarting...");
-            shutdown(sock, 0);
-            close(sock);
-        }
+        // --- FIN DE LA SECCIÓN CORREGIDA ---
+
+        ESP_LOGI(TAG, "Shutting down socket and restarting...");
+        shutdown(sock, 0);
+        close(sock);
+        vTaskDelay(5000 / portTICK_PERIOD_MS); // Espera 5 segundos antes de volver a conectar
     }
+    vTaskDelete(NULL);
 }

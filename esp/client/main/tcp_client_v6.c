@@ -12,6 +12,7 @@
 #include <arpa/inet.h>
 #include "esp_netif.h"
 #include "esp_log.h"
+#include "caesar.h"
 #if defined(CONFIG_EXAMPLE_SOCKET_IP_INPUT_STDIN)
 #include "addr_from_stdin.h"
 #endif
@@ -84,6 +85,7 @@ static int get_src_iface(char *interface)
 }
 #else
 
+#include "esp_log.h"
 /**
  * @brief In case of Auto mode returns the interface name with a valid IPv6 address or
  *        In case the user has specified interface, validates and returns the interface name.

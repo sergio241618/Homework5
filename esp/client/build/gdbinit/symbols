@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file /project/esp/client/client/build/bootloader/bootloader.elf
+    add-symbol-file /project/esp/client/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file /project/esp/client/client/build/tcp_client.elf
+file /project/esp/client/build/tcp_client.elf

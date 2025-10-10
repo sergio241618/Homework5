@@ -1,2 +1,2 @@
-source /project/esp/client/client/build/gdbinit/symbols
-source /project/esp/client/client/build/gdbinit/connect
+source /project/esp/client/build/gdbinit/symbols
+source /project/esp/client/build/gdbinit/connect

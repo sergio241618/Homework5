@@ -1,4 +1,4 @@
-# Install script for directory: /home/jorge-aguirre/HW5/Homework5/linux
+# Install script for directory: /home/sergio2416/Documents/Microprocessors/Homework5/linux
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jorge-aguirre/HW5/Homework5/linux/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sergio2416/Documents/Microprocessors/Homework5/linux/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,5 +1,5 @@
 CMakeFiles/tcp_client.dir/client.c.o: \
- /home/jorge-aguirre/HW5/Homework5/linux/client.c \
+ /home/sergio2416/Documents/Microprocessors/Homework5/linux/client.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -78,4 +78,4 @@ CMakeFiles/tcp_client.dir/client.c.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h \
- /home/jorge-aguirre/HW5/Homework5/linux/caesar.h
+ /home/sergio2416/Documents/Microprocessors/Homework5/linux/caesar.h

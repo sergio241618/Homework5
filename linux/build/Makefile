@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jorge-aguirre/HW5/Homework5/linux
+CMAKE_SOURCE_DIR = /home/sergio2416/Documents/Microprocessors/Homework5/linux
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jorge-aguirre/HW5/Homework5/linux/build
+CMAKE_BINARY_DIR = /home/sergio2416/Documents/Microprocessors/Homework5/linux/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge-aguirre/HW5/Homework5/linux/build/CMakeFiles /home/jorge-aguirre/HW5/Homework5/linux/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio2416/Documents/Microprocessors/Homework5/linux/build/CMakeFiles /home/sergio2416/Documents/Microprocessors/Homework5/linux/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jorge-aguirre/HW5/Homework5/linux/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sergio2416/Documents/Microprocessors/Homework5/linux/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

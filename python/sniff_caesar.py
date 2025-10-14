@@ -45,7 +45,7 @@ def handle(pkt):
                 print(f"[!] Decode error: {e}")
 
 if __name__ == "__main__":
-    iface = sys.argv[1] if len(sys.argv) > 1 else "enp0s31f6" # Cambia esto a tu interfaz
+    iface = sys.argv[1] if len(sys.argv) > 1 else "wlo1" # Cambia esto a tu interfaz
     bpf = "tcp port 3333"
     print(f"Sniffing on {iface} with filter: {bpf}")
     sniff(iface=iface, filter=bpf, prn=handle, store=False)

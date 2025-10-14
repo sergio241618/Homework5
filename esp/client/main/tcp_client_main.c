@@ -50,7 +50,7 @@ void tcp_client_task(void *pvParameters)
         ESP_LOGI(TAG, "Successfully connected");
 
         // Prepara y cifra el mensaje
-        const char* plaintext_payload = "Sparta123!";
+        const char* plaintext_payload = "Hello World";
         uint8_t shift = 7;
         size_t encrypted_len = caesar_encrypt_bytes(plaintext_payload, shift, tx_buffer, sizeof(tx_buffer));
 

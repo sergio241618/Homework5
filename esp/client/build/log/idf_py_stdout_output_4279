@@ -609,4 +609,119 @@ entry 0x40080638
 [0;32mI (540589) TCP_CLIENT: Successfully connected[0m
 [0;32mI (540589) TCP_CLIENT: Message sent, 12 bytes written[0m
 [0;32mI (540599) TCP_CLIENT: Received 12 bytes[0m
-[0;32mI (540599) TCP_CLIENT: Shu
+[0;32mI (540599) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (545599) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (545609) TCP_CLIENT: Successfully connected[0m
+[0;32mI (545609) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (545619) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (545619) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (550619) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (550629) TCP_CLIENT: Successfully connected[0m
+[0;32mI (550629) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (550639) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (550639) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (555639) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (555689) TCP_CLIENT: Successfully connected[0m
+[0;32mI (555689) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (555699) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (555699) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (560709) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (560719) TCP_CLIENT: Successfully connected[0m
+[0;32mI (560719) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (560729) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (560729) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (565729) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (566129) TCP_CLIENT: Successfully connected[0m
+[0;32mI (566129) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (566339) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (566339) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (571339) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (571359) TCP_CLIENT: Successfully connected[0m
+[0;32mI (571359) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (571369) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (571369) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (576369) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (576679) TCP_CLIENT: Successfully connected[0m
+[0;32mI (576679) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (576889) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (576889) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (581889) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (581899) TCP_CLIENT: Successfully connected[0m
+[0;32mI (581899) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (581909) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (581909) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (586909) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (587119) TCP_CLIENT: Successfully connected[0m
+[0;32mI (587129) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (587139) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (587139) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (592139) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (592449) TCP_CLIENT: Successfully connected[0m
+[0;32mI (592449) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (592669) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (592669) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (597669) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (597979) TCP_CLIENT: Successfully connected[0m
+[0;32mI (597979) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (598189) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (598189) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (603189) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (603509) TCP_CLIENT: Successfully connected[0m
+[0;32mI (603509) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (603719) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (603719) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (608719) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (609039) TCP_CLIENT: Successfully connected[0m
+[0;32mI (609039) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (609079) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (609079) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (614079) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (614359) TCP_CLIENT: Successfully connected[0m
+[0;32mI (614359) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (614569) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (614569) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (619569) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (619889) TCP_CLIENT: Successfully connected[0m
+[0;32mI (619899) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (619909) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (619909) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (624909) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (625009) TCP_CLIENT: Successfully connected[0m
+[0;32mI (625009) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (625019) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (625019) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (630029) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (630339) TCP_CLIENT: Successfully connected[0m
+[0;32mI (630339) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (630549) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (630549) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (635549) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (635559) TCP_CLIENT: Successfully connected[0m
+[0;32mI (635559) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (635579) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (635579) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (640579) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (640779) TCP_CLIENT: Successfully connected[0m
+[0;32mI (640789) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (640789) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (640789) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (645789) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (646109) TCP_CLIENT: Successfully connected[0m
+[0;32mI (646109) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (646309) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (646309) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (651319) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (651639) TCP_CLIENT: Successfully connected[0m
+[0;32mI (651639) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (651849) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (651849) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (656849) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (657159) TCP_CLIENT: Successfully connected[0m
+[0;32mI (657169) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (657369) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (657369) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (662379) TCP_CLIENT: Socket created, connecting to 10.218.214.104:3333[0m
+[0;32mI (662489) TCP_CLIENT: Successfully connected[0m
+[0;32mI (662489) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (662509) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (662509) TCP_CLIENT: Shutting down socket and restarting...[0m

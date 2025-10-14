@@ -1,0 +1,366 @@
+Command: /opt/esp-idf-tools/python_env/idf5.5_py3.10_env/bin/python /opt/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /project/esp/client/build/tcp_client.elf /project/esp/client/build/bootloader/bootloader.elf -m '/opt/esp-idf-tools/python_env/idf5.5_py3.10_env/bin/python' '/opt/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-468-g02c5f2dbb9 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 10 2025 04:03:51[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=191d8h (102872) map[0m
+[0;32mI (124) esp_image: segment 1: paddr=00029200 vaddr=3ffb0000 size=03eech ( 16108) load[0m
+[0;32mI (131) esp_image: segment 2: paddr=0002d0f4 vaddr=40080000 size=02f24h ( 12068) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=8708ch (553100) map[0m
+[0;32mI (325) esp_image: segment 4: paddr=000b70b4 vaddr=40082f24 size=14ee8h ( 85736) load[0m
+[0;32mI (358) esp_image: segment 5: paddr=000cbfa4 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (370) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (370) boot: Disabling RNG early entropy source...[0m
+[0;32mI (381) cpu_start: Multicore app[0m
+[0;32mI (389) cpu_start: Pro cpu start user code[0m
+[0;32mI (389) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (389) app_init: Application information:[0m
+[0;32mI (389) app_init: Project name:     tcp_client[0m
+[0;32mI (393) app_init: App version:      1[0m
+[0;32mI (397) app_init: Compile time:     Oct 14 2025 04:08:33[0m
+[0;32mI (402) app_init: ELF file SHA256:  e3aeb9cff...[0m
+[0;32mI (406) app_init: ESP-IDF:          v5.5-468-g02c5f2dbb9[0m
+[0;32mI (411) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (415) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (419) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (423) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (429) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (434) heap_init: At 3FFB7FD8 len 00028028 (160 KiB): DRAM[0m
+[0;32mI (440) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (445) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (450) heap_init: At 40097E0C len 000081F4 (32 KiB): IRAM[0m
+[0;33mW (457) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (469) spi_flash: detected chip: generic[0m
+[0;32mI (472) spi_flash: flash io: dio[0m
+[0;33mW (475) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) main_task: Started on CPU0[0m
+[0;32mI (499) main_task: Calling app_main()[0m
+[0;32mI (529) example_connect: Start example_connect.[0m
+[0;32mI (549) wifi:wifi driver task: 3ffbfcdc, prio:23, stack:6656, core=0[0m
+[0;32mI (569) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (569) wifi:wifi certification version: v7.0[0m
+[0;32mI (569) wifi:config NVS flash: enabled[0m
+[0;32mI (569) wifi:config nano formatting: disabled[0m
+[0;32mI (569) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (579) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (579) wifi:Init management short buffer num: 32[0m
+[0;32mI (579) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (589) wifi:Init static rx buffer num: 10[0m
+[0;32mI (599) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi_init: rx ba win: 6[0m
+[0;32mI (599) wifi_init: accept mbox: 6[0m
+[0;32mI (609) wifi_init: tcpip mbox: 32[0m
+[0;32mI (609) wifi_init: udp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp tx win: 5760[0m
+[0;32mI (619) wifi_init: tcp rx win: 5760[0m
+[0;32mI (619) wifi_init: tcp mss: 1440[0m
+[0;32mI (619) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (629) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (629) phy_init: phy_version 4861,b71b5ad,Aug  5 2025,11:16:06[0m
+[0;32mI (719) wifi:mode : sta (f8:b3:b7:33:4c:64)[0m
+[0;32mI (719) wifi:enable tsf[0m
+[0;32mI (729) example_connect: Connecting to S24 Ultra Sergio...[0m
+[0;33mW (729) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (729) example_connect: Waiting for IP(s)[0m
+[0;32mI (3389) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3389) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4399) wifi:state: auth -> init (0x200)[0m
+[0;32mI (4399) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4399) example_connect: Wi-Fi disconnected 2, trying to reconnect...[0m
+[0;32mI (6819) example_connect: Wi-Fi disconnected 205, trying to reconnect...[0m
+[0;32mI (9229) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (9229) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (9239) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (9309) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (9339) wifi:connected with S24 Ultra Sergio, aid = 3, channel 1, BW20, bssid = 72:35:1c:4f:58:88[0m
+[0;32mI (9339) wifi:security: WPA2-PSK, phy: bgn, rssi: -43[0m
+[0;32mI (9339) wifi:pm start, type: 1[0m
+
+[0;32mI (9349) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (9389) wifi:<ba-add>idx:0 (ifx:0, 72:35:1c:4f:58:88), tid:0, ssn:1, winSize:64[0m
+[0;32mI (9419) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (9419) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (10389) esp_netif_handlers: example_netif_sta ip: 10.218.214.69, mask: 255.255.255.0, gw: 10.218.214.28[0m
+[0;32mI (10389) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 10.218.214.69[0m
+[0;32mI (10389) example_common: Connected to example_netif_sta[0m
+[0;32mI (10399) example_common: - IPv4 address: 10.218.214.69,[0m
+[0;32mI (10399) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[0;32mI (10409) main_task: Returned from app_main()[0m
+[0;32mI (10569) TCP_CLIENT: Successfully connected[0m
+[0;32mI (10569) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (10579) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (10579) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (15579) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (15879) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (17879) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[0;32mI (18129) TCP_CLIENT: Successfully connected[0m
+[0;32mI (18129) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (18339) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (18339) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (23339) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (23349) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (25349) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (25609) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (27609) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (27629) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (29629) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[0;32mI (29909) TCP_CLIENT: Successfully connected[0m
+[0;32mI (29909) TCP_CLIENT: Message sent, 12 bytes written[0m
+[0;32mI (30119) TCP_CLIENT: Received 12 bytes[0m
+[0;32mI (30119) TCP_CLIENT: Shutting down socket and restarting...[0m
+[0;32mI (35119) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (35439) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (37439) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (37689) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (39689) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (39739) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (41739) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (41989) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (43989) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (44039) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (46039) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (46289) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (48289) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (48299) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (50299) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (50589) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (52589) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (52849) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (54849) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (55099) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (57099) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (57109) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (59109) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (59399) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (61399) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (61649) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (63649) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (63659) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (65659) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (65949) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (67959) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (68009) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (70009) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (70249) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (72249) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (72259) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (74259) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (74269) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (76269) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (76309) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (78309) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (78359) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (80359) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (80399) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (82399) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (82409) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (84409) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (84589) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (86589) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (86839) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (88839) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (88989) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (90989) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (91239) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (93249) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (93259) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (95259) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (95269) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (97279) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (97299) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (99299) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (99349) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (101349) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (101369) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (103369) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (103379) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (105379) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (105389) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (107389) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (107429) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (109439) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (109479) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (111489) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (111509) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (113509) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (113519) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (115519) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (115819) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (117819) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (118069) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (120069) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (120079) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (122079) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (122369) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (124379) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (124629) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (126629) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (126879) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (128879) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (128889) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (130889) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (131179) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (133179) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (133429) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (135429) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (135689) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (137689) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (137699) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (139699) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (139709) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (141709) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (141729) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (143729) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (145519) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (147519) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (147769) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (149769) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (150019) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (152019) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (152279) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (154279) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (154289) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (156289) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (156579) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (158579) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (158609) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (160609) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (160879) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (162879) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (162939) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (164939) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (164949) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (166949) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (167119) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (169119) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (169129) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (171129) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (171429) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (173429) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (173439) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (175439) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (175729) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (177729) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (177979) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (179979) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (180229) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (182229) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (182239) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (184239) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (184249) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (186249) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (186259) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (188259) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (188419) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (190419) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (190669) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (192679) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (192929) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (194929) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (195179) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (197179) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (197429) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (199429) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (199689) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (201689) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (201739) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (203739) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (203989) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (205989) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (206039) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (208039) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (208099) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (210099) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (210109) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (212109) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (212119) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (214119) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (214429) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (216429) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (216439) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (218439) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (218729) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (220729) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (220979) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (222989) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (222999) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (224999) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (225289) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (227289) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (227299) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (229299) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (229309) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (231309) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (231339) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (233339) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (233349) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (235349) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (235529) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (237529) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (237539) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (239549) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (239719) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (241719) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (241979) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (243979) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (244229) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (246229) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (246479) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (248479) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (248489) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (250489) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (250779) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (252779) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (253029) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (255039) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (255049) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (257049) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (257339) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (259339) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (259349) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (261349) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (261359) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (263359) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (264909) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (266909) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (270239) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (272239) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (272289) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (274289) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (274299) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (276299) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (276319) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (278319) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (282929) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (284939) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (284949) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (286949) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (287239) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (289239) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (289249) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (291249) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m
+[1;31mE (295749) TCP_CLIENT: Socket unable to connect: errno 104[0m
+[0;32mI (297749) TCP_CLIENT: Socket created, connecting to 10.218.214.169:3333[0m

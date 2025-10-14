@@ -1,5 +1,5 @@
 # sniff_caesar.py
-from scapy.all import sniff, TCP, Raw
+from scapy.all import sniff, TCP, Raw, IP
 import sys
 
 def _rot_alpha(ch, shift):
@@ -39,13 +39,23 @@ def handle(pkt):
         data = bytes(pkt[Raw].load)
         if len(data) >= 2:
             try:
+                # Decodifica el payload cifrado a texto visible
+                encrypted_text = data[1:].decode('utf-8', errors='ignore')
+
+                # Muestra el contexto del paquete
+                print(f"--- Packet captured from {pkt[IP].src}:{pkt[TCP].sport} -> {pkt[IP].dst}:{pkt[TCP].dport} ---")
+                
+                # Muestra las tres versiones
+                print(f"  [+] Encrypted Payload (hex): {data.hex()}")
+                print(f"  [+] Encrypted Text:         {encrypted_text}")
+                
                 plain = caesar_decrypt(data)
-                print(f"[+] Decrypted: {plain}")
+                print(f"  [+] Decrypted Message:      {plain}\n")
             except Exception as e:
                 print(f"[!] Decode error: {e}")
 
 if __name__ == "__main__":
-    iface = sys.argv[1] if len(sys.argv) > 1 else "wlo1" # Cambia esto a tu interfaz
+    iface = sys.argv[1] if len(sys.argv) > 1 else "wlp4s0" # Asegúrate que esta sea tu interfaz Wi-Fi
     bpf = "tcp port 3333"
     print(f"Sniffing on {iface} with filter: {bpf}")
     sniff(iface=iface, filter=bpf, prn=handle, store=False)

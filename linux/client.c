@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
     }
 
     uint8_t pkt[BUFSZ];
-    uint8_t shift = 5; // Elige tu desplazamiento (0-25)
+    uint8_t shift = 7; // Elige tu desplazamiento (0-25)
     size_t n = caesar_encrypt_bytes(msg, shift, pkt, sizeof(pkt));
     send(sfd, pkt, n, 0);
 

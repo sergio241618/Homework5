@@ -1,0 +1,2 @@
+source /project/esp/client/build/bootloader/gdbinit/symbols
+source /project/esp/client/build/bootloader/gdbinit/connect
